@@ -1,3 +1,4 @@
+pip install streamlit
 import streamlit as st
 import joblib
 import numpy as np
@@ -11,5 +12,4 @@ if st.button("Predict Result"):
  if prediction[0] == 1:
   st.success("Prediction: PASS")
  else:
-
   st.error("Prediction: FAIL")
