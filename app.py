@@ -1,7 +1,6 @@
-pip install streamlit
 import streamlit as st
-import joblib
 import numpy as np
+import joblib
 model = joblib.load("student_pass_model.pkl")
 st.title("Student Pass/Fail Prediction System")
 study_hours = st.number_input("Study Hours per Week", min_value=0.0, max_value=40.0, value=10.0)
@@ -13,3 +12,4 @@ if st.button("Predict Result"):
   st.success("Prediction: PASS")
  else:
   st.error("Prediction: FAIL")
+
